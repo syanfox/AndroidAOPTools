@@ -23,4 +23,20 @@ public class MainActivity extends AppCompatActivity {
         result=i+ Integer.valueOf(s)+f;
         return result;
     }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

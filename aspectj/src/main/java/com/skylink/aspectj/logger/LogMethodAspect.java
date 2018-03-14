@@ -24,10 +24,10 @@ public class LogMethodAspect {
     private static final String POINTCUT_METHOD = "execution(@com.skylink.aspectj.logger.LogMethodTrace * *(..))";
 
     @Pointcut(POINTCUT_METHOD)
-    public void methodAnnotatedWithDebugTrace() {}
+    public void methodAnnotatedWithLogMethodTrace() {}
 
 
-    @Around("methodAnnotatedWithDebugTrace()")
+    @Around("methodAnnotatedWithLogMethodTrace()")
     public Object weaveJoinPoint(ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         Method method = methodSignature.getMethod();
